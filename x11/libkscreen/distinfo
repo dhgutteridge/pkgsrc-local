@@ -1,0 +1,11 @@
+$NetBSD$
+
+SHA1 (libkscreen-5.16.4.tar.xz) = 6506533a9ea257700bd2813eb885db1a28345372
+RMD160 (libkscreen-5.16.4.tar.xz) = dd99eb12619a4ca12d1ec2842b98d674793ddddd
+SHA512 (libkscreen-5.16.4.tar.xz) = 84b7e0af12f95a385575ec71cbbd1dc189d463dd7ad189a2adc49b8dc665018e36325f86d0a949310e07b90e67bc8c5ff8f75e914947a013064377579862b9e7
+Size (libkscreen-5.16.4.tar.xz) = 80988 bytes
+SHA1 (patch-CMakeLists.txt) = 49a8d6b92651f15443922a2b2856c07a50da7582
+SHA1 (patch-autotests_CMakeLists.txt) = 2c775c23955ba2b0a8ab1a9d6f14200abfc24b53
+SHA1 (patch-backends_CMakeLists.txt) = 3267c37ecdfd155dbea2b8de577d12e706bf16ca
+SHA1 (patch-src_CMakeLists.txt) = b8b1fa2a105785f5d11232effb19a83bc42c2c33
+SHA1 (patch-tests_CMakeLists.txt) = 614634132e4f54e61b90a51f8435c541748b7dc3

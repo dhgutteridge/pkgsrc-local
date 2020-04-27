@@ -1,0 +1,19 @@
+$NetBSD$
+
+Make kwayland support optional.
+
+--- src/CMakeLists.txt.orig	2019-07-30 10:26:43.000000000 +0000
++++ src/CMakeLists.txt
+@@ -1,7 +1,11 @@
+ include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${CMAKE_CURRENT_BINARY_DIR} ${QT_INCLUDES})
+ 
+ add_subdirectory(backendlauncher)
+-add_subdirectory(doctor)
++
++if(${KF5Wayland_FOUND})
++    add_subdirectory(doctor)
++endif()
++
+ set(libkscreen_SRCS
+     abstractbackend.cpp
+     backendmanager.cpp

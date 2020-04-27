@@ -1,0 +1,49 @@
+$NetBSD$
+
+Make kwayland support optional.
+
+--- autotests/CMakeLists.txt.orig	2019-07-30 10:26:43.000000000 +0000
++++ autotests/CMakeLists.txt
+@@ -25,24 +25,25 @@ kscreen_add_test(testlog)
+ kscreen_add_test(testmodelistchange)
+ kscreen_add_test(testedid)
+ 
+-set(KSCREEN_WAYLAND_LIBS
+-    KF5::WaylandServer KF5::WaylandClient
+-)
+-
+-# For WaylandConfigReader and TestServer
+-set(KSCREEN_WAYLAND_SRCS
+-    ${CMAKE_SOURCE_DIR}/tests/kwayland/waylandconfigreader.cpp
+-    ${CMAKE_SOURCE_DIR}/tests/kwayland/waylandtestserver.cpp
+-)
+-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../backends/kwayland)
+-
+-kscreen_add_test(testkwaylandbackend)
+-kscreen_add_test(testkwaylandconfig)
+-kscreen_add_test(testkwaylanddpms)
+-
+-set(KSCREEN_WAYLAND_LIBS "")
+-set(KSCREEN_WAYLAND_SRCS "")
++if (ENABLE_KF5Wayland_TESTS)
++    set(KSCREEN_WAYLAND_LIBS
++        KF5::WaylandServer KF5::WaylandClient
++    )
++
++    # For WaylandConfigReader and TestServer
++    set(KSCREEN_WAYLAND_SRCS
++        ${CMAKE_SOURCE_DIR}/tests/kwayland/waylandconfigreader.cpp
++        ${CMAKE_SOURCE_DIR}/tests/kwayland/waylandtestserver.cpp
++    )
++    include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../backends/kwayland)
++
++    kscreen_add_test(testkwaylandbackend)
++    kscreen_add_test(testkwaylandconfig)
++    kscreen_add_test(testkwaylanddpms)
+ 
++    set(KSCREEN_WAYLAND_LIBS "")
++    set(KSCREEN_WAYLAND_SRCS "")
++endif()
+ 
+ if (ENABLE_XRANDR_TESTS)
+     kscreen_add_test(textxrandr)

@@ -1,0 +1,20 @@
+$NetBSD$
+
+Make kwayland support optional.
+
+--- backends/CMakeLists.txt.orig	2019-07-30 10:26:43.000000000 +0000
++++ backends/CMakeLists.txt
+@@ -1,6 +1,12 @@
+ add_subdirectory(fake)
+ add_subdirectory(qscreen)
+-add_subdirectory(kwayland)
++
++if(${KF5Wayland_FOUND})
++    message(STATUS "Will build kwayland backend.")
++    add_subdirectory(kwayland)
++else()
++    message(STATUS "Not building kwayland backend, no KF5Wayland_FOUND set.")
++endif()
+ 
+ if(${XCB_RANDR_FOUND})
+     message(STATUS "Will build xrandr backend.")
