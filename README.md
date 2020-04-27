@@ -1,2 +1,2 @@
 # pkgsrc-local
-Personal repository of changes to pkgsrc (staged, or not intended for merging)
+Personal repository of changes to pkgsrc (staged, or not intended for merging) and supplementary tools. This largely consists of either works in progress (which may not be suitable to commit to pkgsrc-wip, as they may conflict with others' activities there) or changes that are unlikely to be merged into pkgsrc or submitted to the upstream project in question due to limited general relevance (e.g., platform support for specific edge-cases).
