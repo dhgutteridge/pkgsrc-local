@@ -13,12 +13,6 @@ USE_TOOLS+=	pkg-config
 
 PKGCONFIG_OVERRIDE+=	src/kscreen2.pc.in
 
-SUBST_CLASSES+=		qlc
-SUBST_STAGE.qlc=	pre-configure
-SUBST_MESSAGE.qlc=	Move to new KDE location
-SUBST_FILES.qlc=	CMakeLists.txt
-SUBST_SED.qlc=		-e 's:{KDE_INSTALL_CONFDIR}:{KDE_INSTALL_LOGGINGCATEGORIESDIR}:'
-
 PLIST_VARS+=	wayland
 
 .include "../../devel/wayland/platform.mk"

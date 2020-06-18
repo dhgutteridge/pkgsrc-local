@@ -6,6 +6,7 @@ BUILDLINK_TREE+=	libkscreen
 LIBKSCREEN_BUILDLINK3_MK:=
 
 BUILDLINK_API_DEPENDS.libkscreen+=	libkscreen>=5.6.3
+BUILDLINK_ABI_DEPENDS.libkscreen?=	libkscreen>=5.16.4nb2
 BUILDLINK_PKGSRCDIR.libkscreen?=	../../x11/libkscreen
 
 .include "../../devel/wayland/platform.mk"
