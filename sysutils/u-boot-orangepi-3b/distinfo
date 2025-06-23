@@ -1,0 +1,9 @@
+$NetBSD$
+
+BLAKE2s (orangepi-3b-rk3566_ddr_1056MHz_v1.23.bin) = 30a666b2dfa19ea07eb16ae9cee59a0de8ed227e73f3ca97ae1b7afbc4fc157f
+SHA512 (orangepi-3b-rk3566_ddr_1056MHz_v1.23.bin) = 6f7ada338bbaa01d347bd1d702cd0e1e7ef146f32e43680cb2cd06212e76e9937d1e972b021c43b9cae4ad92d67535373a72a09442171889cbd37d26e38811d8
+Size (orangepi-3b-rk3566_ddr_1056MHz_v1.23.bin) = 59392 bytes
+BLAKE2s (u-boot-2024.10.tar.bz2) = dfec4437e3f21cbd97b0336ce035bc8456da74733e773b8bd32f9c0d8520f147
+SHA512 (u-boot-2024.10.tar.bz2) = ef817c9b5ae8dc6cd9e3f57811e90acc6a4d4394f0356aa5923e3e3c8559168f977bd5bf82824cd3650aa8e5e3c3d1b00e20818d21368151748682f1fc51152c
+Size (u-boot-2024.10.tar.bz2) = 26398495 bytes
+SHA1 (patch-configs_orangepi-3b-rk3566__defconfig) = be89b953a99288d6fa30b2591d58f3a95ce2bb61

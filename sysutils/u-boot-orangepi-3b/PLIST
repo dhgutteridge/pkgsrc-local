@@ -1,0 +1,4 @@
+@comment $NetBSD$
+share/u-boot/orangepi-3b/installboot.plist
+share/u-boot/orangepi-3b/u-boot-rockchip-spi.bin
+share/u-boot/orangepi-3b/u-boot-rockchip.bin
