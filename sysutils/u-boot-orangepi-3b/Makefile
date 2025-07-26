@@ -28,16 +28,14 @@ DISTFILES=	${DEFAULT_DISTFILES}
 # Rockchip-supplied binary blob for RAM functionality.
 # rockchip-linux/rkbin does not use tags or releases, everything is committed
 # directly to master. Binary files are versioned in their names and removed
-# on update, so one would have to point to a specific commit hash for
-# package stability.
-# rockchip-linux/rkbin/raw/refs/heads/master/bin/rk35/rk3566_ddr_1056MHz_v1.23.bin
-ORANGEPI=	orangepi-3b
-
+# on update, so we have to point to a specific commit hash for package stability.
+BOARD_NAME=		orangepi-3b
 xRAM_BIN=		rk3566_ddr_1056MHz_v1.23.bin
-RAM_BIN=		${ORANGEPI}-${xRAM_BIN}
+RAM_BIN=		${BOARD_NAME}-${xRAM_BIN}
+REVISION=		fd73dcf27702e1efc2065055215320adeaadee84
 DISTFILES+=		${RAM_BIN}
 SITES.${RAM_BIN}=	${MASTER_SITE_GITHUB:@url@ \
-			-${url}rockchip-linux/rkbin/raw/refs/heads/master/bin/rk35/${xRAM_BIN} @}
+			-${url}rockchip-linux/rkbin/raw/${REVISION}/bin/rk35/${xRAM_BIN} @}
 
 # pkgsrc tries to run distfiles that end in .bin, expecting them to be
 # Java self-extracting archives; handle manually.
