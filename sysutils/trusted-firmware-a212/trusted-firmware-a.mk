@@ -2,7 +2,7 @@
 
 .include "../../sysutils/trusted-firmware-a212/trusted-firmware-a-dist.mk"
 
-PKGNAME?=	trusted-firmware-a-${PLATFORM}-${VERSION}
+PKGNAME?=	trusted-firmware-a212-${PLATFORM}-${VERSION}
 
 RELRO_SUPPORTED=	no
 #MAKE_FLAGS+=	CROSS_COMPILE=${PREFIX}/cross-aarch64-none-elf/bin/aarch64-none-elf-
